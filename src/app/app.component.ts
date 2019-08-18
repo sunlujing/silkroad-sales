@@ -2,14 +2,14 @@ import {Component, ViewChild} from '@angular/core';
 import {Platform, Nav, ToastController} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
-import {LearnTabPage} from "../pages/learn-tab-page/learn-tab-page";
+import {SilkroadSalesPage} from "../pages/silkroad-sales/silkroad-sales-page";
 // import {Splash} from "../pages/splash/splash";
 
 @Component({
   templateUrl: 'app.html'
 })
-export class MyApp {
-  rootPage: any = LearnTabPage;
+export class SilkroadSalesApp {
+  rootPage: any = SilkroadSalesPage;
   platform: any = Platform;
   toast: any = ToastController;
   backButtonPressed: boolean = false;  //用于判断返回键是否触发
@@ -34,7 +34,7 @@ export class MyApp {
       this.platform.registerBackButtonAction((): any => {
         let activeVC = this.nav.getActive();
         let page = activeVC.instance;
-        if (!(page instanceof LearnTabPage)) {
+        if (!(page instanceof SilkroadSalesPage)) {
           if (!this.nav.canGoBack()) {
             //当前页面为tabs，退出APP
             return this.showExit();

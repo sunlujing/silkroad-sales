@@ -4,31 +4,27 @@ import {IonicApp, IonicErrorHandler, IonicModule,} from 'ionic-angular';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {StatusBar} from '@ionic-native/status-bar';
 
-import {MyApp} from './app.component';
+import {SilkroadSalesApp} from './app.component';
 import { IonicStorageModule } from '@ionic/storage';
 import {Data} from '../providers/data';
-import {GoodListsPage} from "../pages/learn-tab-page/good-lists-page/good-lists-page";
-import {GoodsService} from "../providers/goods-service";
 import {HttpModule} from "@angular/http";
 import {LazyLoadImageModule} from "ng-lazyload-image";
-import {GoodDetailPage} from "../pages/learn-tab-page/good-detail-page/good-detail-page";
 import {LookService} from "../providers/look-service";
 import {SuperTabsModule} from "ionic2-super-tabs";
-import {TabHomePageModule} from "../pages/learn-tab-page/tab-home-page/tab-home-page.module";
-import {TabBroadcastPageModule} from "../pages/learn-tab-page/tab-look-page/tab-look-page.module";
-import {TabDiscoverPageModule} from "../pages/learn-tab-page/tab-discover-page/tab-discover-page.module";
-import {TabMorePagePageModule} from "../pages/learn-tab-page/tab-my-page-page/tab-my-page-page.module";
-import {TabMessagesPageModule} from "../pages/learn-tab-page/tab-shopcart-page/tab-shopcart-page.module";
-import {LearnTabPageModule} from "../pages/learn-tab-page/learn-tab-page.module";
+import {MyProfilePageModule} from "../pages/silkroad-sales/my-profile-page/my-profile-page.module";
+import {SalesHomePageModule} from "../pages/silkroad-sales/sales-home-page/sales-home-page.module";
+import {SalesPartnerPageModule} from "../pages/silkroad-sales/sales-partner-page/sales-partner-page.module";
+import {SilkroadNewsPageModule} from "../pages/silkroad-sales/silkroad-news-page/silkroad-news-page.module";
+import {SilkroadSalesPageModule} from "../pages/silkroad-sales/silkroad-sales-page.module";
 @NgModule({
   declarations: [
-    MyApp,
+    SilkroadSalesApp,
   ],
   imports: [
     LazyLoadImageModule,
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp,{
+    IonicModule.forRoot(SilkroadSalesApp,{
       tabsHideOnSubPages: 'true' ,       //隐藏全部子页面tabs
       iconMode: 'ios',
       mode: 'ios',
@@ -37,26 +33,24 @@ import {LearnTabPageModule} from "../pages/learn-tab-page/learn-tab-page.module"
     }),
     SuperTabsModule.forRoot(),
     IonicStorageModule.forRoot(),//就这里
-    LearnTabPageModule,
-    TabHomePageModule,
-    TabBroadcastPageModule,
-    TabDiscoverPageModule,
-    TabMorePagePageModule,
-    TabMessagesPageModule,
+    MyProfilePageModule,
+    SalesHomePageModule,
+    SalesPartnerPageModule,
+    SilkroadNewsPageModule,
+    SilkroadSalesPageModule,
 
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+    SilkroadSalesApp,
   ],
   providers: [
     Data,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    GoodsService,
     LookService,
   ]
 })
-export class AppModule {
+export class SilkroadSalesAppModule {
 }

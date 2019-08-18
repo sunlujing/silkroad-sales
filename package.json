@@ -31,6 +31,7 @@
         "cordova-plugin-splashscreen": "^4.0.3",
         "cordova-plugin-whitelist": "^1.3.1",
         "flex.css": "^1.1.6",
+        "in": "^0.16.0",
         "ionic-angular": "3.1.1",
         "ionic-plugin-keyboard": "^2.2.1",
         "ionic2-super-tabs": "^2.5.2",
@@ -42,10 +43,11 @@
         "rxjs": "5.1.1",
         "sw-toolbox": "3.4.0",
         "swiper": "^3.4.2",
+        "typescript-tools": "^0.3.1",
         "zone.js": "^0.8.5"
     },
     "devDependencies": {
-        "@ionic/app-scripts": "^2.1.3",
+        "@ionic/app-scripts": "^3.2.4",
         "ionic": "3.19.1",
         "typescript": "~2.2.1",
         "ws": "3.3.2"
